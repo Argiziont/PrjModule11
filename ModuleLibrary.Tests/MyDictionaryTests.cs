@@ -4,7 +4,7 @@ using Xunit;
 
 namespace ModuleLibrary.Tests
 {
-    public class MyDictionaryTests
+    public class MyDictTests
     {
         #region snippet_Add_Passes_InputIsKeyAndPair
 
@@ -12,7 +12,7 @@ namespace ModuleLibrary.Tests
         public void Add_Passes_InputIsCorrect()
         {
             // Arrange
-            var dictionary = new MyDictionary<int,int>();
+            var dictionary = new MyDict<int,int>();
 
 
             // Act
@@ -31,7 +31,7 @@ namespace ModuleLibrary.Tests
         public void Add_Passes_InputIsKeyPairValue()
         {
             // Arrange
-            var dictionary = new MyDictionary<int, int>();
+            var dictionary = new MyDict<int, int>();
 
 
             // Act
@@ -50,7 +50,7 @@ namespace ModuleLibrary.Tests
         public void Add_ThrowsArgumentNullException_InputIsKeyAndValueNull()
         {
             // Arrange
-            var dictionary = new MyDictionary<string, string>();
+            var dictionary = new MyDict<string, string>();
 
 
             // Act
@@ -69,7 +69,7 @@ namespace ModuleLibrary.Tests
         public void Contains_Passes_InputIsKeyPairValue()
         {
             // Arrange
-            var dictionary = new MyDictionary<int, int>();
+            var dictionary = new MyDict<int, int>();
             var pair = new KeyValuePair<int, int>(5, 5);
             dictionary.Add(pair);
 
@@ -89,7 +89,7 @@ namespace ModuleLibrary.Tests
         public void ContainsKey_Passes_InputIsKey()
         {
             // Arrange
-            var dictionary = new MyDictionary<int, int>();
+            var dictionary = new MyDict<int, int>();
             var pair = new KeyValuePair<int, int>(5, 5);
             dictionary.Add(pair);
 
@@ -109,7 +109,7 @@ namespace ModuleLibrary.Tests
         public void ContainsKey_ThrowsArgumentNullException_InputIsKeyNull()
         {
             // Arrange
-            var dictionary = new MyDictionary<string, string>();
+            var dictionary = new MyDict<string, string>();
 
 
             // Act
@@ -128,7 +128,7 @@ namespace ModuleLibrary.Tests
         public void Remove_Passes_InputIsKeyPairValue()
         {
             // Arrange
-            var dictionary = new MyDictionary<int, int>();
+            var dictionary = new MyDict<int, int>();
             var pair = new KeyValuePair<int, int>(5, 5);
             dictionary.Add(pair);
 
@@ -148,7 +148,7 @@ namespace ModuleLibrary.Tests
         public void Remove_Passes_InputIsKey()
         {
             // Arrange
-            var dictionary = new MyDictionary<int, int>();
+            var dictionary = new MyDict<int, int>();
             var pair = new KeyValuePair<int, int>(5, 5);
             dictionary.Add(pair);
 
@@ -168,7 +168,7 @@ namespace ModuleLibrary.Tests
         public void Remove_ThrowsArgumentNullException_InputIsKeyNull()
         {
             // Arrange
-            var dictionary = new MyDictionary<string, string>();
+            var dictionary = new MyDict<string, string>();
 
 
             // Act
